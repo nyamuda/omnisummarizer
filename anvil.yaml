@@ -5,8 +5,19 @@ package_name: M3_App_1
 renamed: true
 runtime_options:
   client_version: '3'
-  server_spec: {base: python310-minimal}
+  server_spec: {base: python310-machine-learning}
   server_version: python3-sandbox
   version: 2
-services: []
-startup_form: Form1
+secrets:
+  HUGGINGFACE_API_TOKEN:
+    type: secret
+    value: {LW57SDY4GGGRUCLD: zjIruPFFns4uZZdvUEb8Tmti+ygqEfWHW84bED9pSbEfiiBfNfNzSkMhoXs5MMqPrgzbXER6Q2jQFaGpUiQB8Ih7DB20co8sFZXJCwPEAifnGqWWbEWmA/LRJvJShIHdf0W7W5hMCaLVKUSmUeuYrt/q+fdV8SAMrCP3K7lZCbcZbejj}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
+startup: null
+startup_form: null
