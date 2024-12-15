@@ -42,9 +42,7 @@ def summarize_text(text):
 @anvil.server.callable
 def summarize_with_length(prompt,text, max_length,min_length):
   parameters = {
-        "max_length": max_length,
-        "min_length": min_length
-        
+        "min_length": min_length     
     }
   response = inference(f"{prompt}: {text}", params=parameters)
   # Get the summarized text
