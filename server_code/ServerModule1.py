@@ -4,12 +4,12 @@ from huggingface_hub import InferenceClient
 from huggingface_hub.inference_api import InferenceApi
 import re
 API_TOKEN=anvil.secrets.get_secret('HUGGINGFACE_API_TOKEN')
-client = InferenceClient("nyamuda/extractive-summarization",
+client = InferenceClient("nyamuda/summasphere",
                          token=API_TOKEN)
 
 # Initialize the Inference API
 inference = InferenceApi(
-    repo_id="nyamuda/extractive-summarization", token=API_TOKEN, task="summarization")
+    repo_id="nyamuda/summasphere", token=API_TOKEN, task="summarization")
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
