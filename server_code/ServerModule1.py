@@ -43,9 +43,8 @@ def summarize_text(text):
 def summarize_with_length(prompt,text, max_length,min_length):
   parameters = {
         "max_length": max_length,
-        "min_length": min_length,
-        "num_beams": 4,  # Optional: adjust for better generation quality
-        "length_penalty": 2.0  # Optional: adjust penalty to balance length
+        "min_length": min_length
+        
     }
   response = inference(f"{prompt}: {text}", params=parameters)
   # Get the summarized text
