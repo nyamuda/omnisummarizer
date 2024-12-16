@@ -9,7 +9,7 @@ client = InferenceClient("nyamuda/summasphere",
 
 # Initialize the Inference API
 inference = InferenceApi(
-    repo_id="nyamuda/summasphere", token=API_TOKEN, task="summarization")
+    repo_id="nyamuda/extractive-summarization ", token=API_TOKEN, task="summarization")
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
